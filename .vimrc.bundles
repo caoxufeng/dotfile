@@ -1,0 +1,50 @@
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "altercation/vim-colors-solarized"
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+let g:airline_theme='papercolor'
+
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
+
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let g:NERDTreeShowIgnoredStatus = 1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+" o 打开关闭文件或目录
+" e 以文件管理的方式打开选中的目录
+" t 在标签页中打开
+" T 在标签页中打开，但光标仍然留在 NERDTree
+" r 刷新光标所在的目录
+" R 刷新当前根路径
+" I 显示隐藏文件
+" C 将根路径设置为光标所在的目录
+" u 设置上级目录为根路径
+" ctrl + w + w 光标自动在左右侧窗口切换
+" ctrl + w + r 移动当前窗口的布局位置
+" :tabc 关闭当前的 tab
+" :tabo   关闭所有其他的 tab
+" :tabp   前一个 tab
+" :tabn   后一个 tab
+" gT      前一个 tab
+" gt      后一个 tab
